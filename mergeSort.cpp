@@ -49,11 +49,14 @@ void mergeSort(int low, int high){
     int j = mid + 1;        // step 4.b
     int k = low;            // step 4.c
 
-    while (i <= mid && j <= high)
+    while (i <= mid && j <= high) // && operator AND, || operator OR
     {
-        if (arr[i] <= arr[j])
-        {
-            
+        if (arr[i] <= arr[j]){
+            B[k] = arr[i];
+            i++;
+        } else{
+            B[k] = arr[j];
+            j++;
         }
         
     }
